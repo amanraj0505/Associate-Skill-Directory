@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <!-- Site made with Mobirise Website Builder v5.2.0, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.2.0, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="description" content="">
+  
+  <title>Profile</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/tether/tether.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/bootstrap/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/bootstrap/css/bootstrap-grid.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/bootstrap/css/bootstrap-reboot.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/dropdown/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/socicon/css/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/theme/css/style.css') }}">
+  <link rel="preload" as="style" href="{{ url_for('static',filename='assets/mobirise/css/mbr-additional.css') }}"><link rel="stylesheet" href="{{ url_for('static',filename='assets/mobirise/css/mbr-additional.css') }}" type="text/css">
+  <meta charset="utf-8">
+    <!--  This file has been downloaded from bootdey.com    @bootdey on twitter -->
+    <!--  All snippets are MIT license http://bootdey.com/license -->
+    <title>Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+body{
+    margin-top:20px;
+    color: #1a202c;
+    text-align: left;
+    background: linear-gradient(to top left, #33ccff 0%, #ff0066 100%);    
+}
+.main-body {
+    padding: 15px;
+}
+.card {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+}
+
+
+
+</style>
+</head>
+<body>
+  
+  <section class="menu menu1 cid-sg2Ygbxqkg" once="menu" id="menu1-u">
+    
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-7" href="">ASD</a></span>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{{ url_for('aboutUs') }}">
+                  About us</a></li>
+          <li class="nav-item" ><a class="nav-link link text-black text-primary display-4" href="{{ url_for('search') }}" {{searchFlag}}>
+                  Search</a></li>
+          <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{{ url_for('roadmap') }}" {{roadmapFlag}}>
+                  Roadmap</a></li>    
+          <li class="nav-item"}><a class="nav-link link text-black text-primary display-4" href="{{ url_for('teamBuild') }}" {{buildTeamFlag}}>
+                  Build Team</a></li> 
+          <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{{ url_for('profile') }}">
+              Profile</a></li></ul>
+                
+                
+            </div>
+        </div>
+    </nav>
+</section>
+
+<section class="header18 cid-sg2YgcBGRX mbr-fullscreen" id="header18-v">
+
+    
+
+    
+
+    <div class="align-center container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-3 display-1"></h1>
+                <div class="container">
+                    <div class="main-body">
+                    
+                          <div class="row gutters-sm">
+                            <div class="col-md-4 mb-3">
+                              <div class="card">
+                                <div class="card-body">
+                                  <div class="d-flex flex-column align-items-center text-center">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                                    <div class="mt-3">
+                                      <h4>{{to_send[1]}}</h4>
+                                      <p class="text-secondary mb-1">
+                                        {{to_send[4]}}  
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card mt-3">
+                                  </div>
+                            </div>
+                            <div class="col-md-8">
+                              <form method="POST">
+                              <div class="card mb-3">
+                                <div class="card-body">
+                                  <div class="row">
+                                    <div class="col-sm-3">
+                                      <h6 class="mb-0">Full Name</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                    <input type="text" value="{{to_send[1]}}" name="name">
+                                    </div>
+                                  </div>
+                                  <hr>
+                                  <div class="row">
+                                    <div class="col-sm-3">
+                                      <h6 class="mb-0">Email</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                      <input type="text" value="{{to_send[3]}}" name="email">
+                                    </div>
+                                  </div>
+                                  <hr>
+                                  <div class="row">
+                                    <div class="col-sm-3">
+                                      <h6 class="mb-0">Phone</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                      <input type="text" value="{{to_send[5]}}" name="phone">
+                                    </div>
+                                  </div>
+                                  <hr>
+                                  <div class="row">
+                                    <div class="col-sm-3">
+                                      <h6 class="mb-0">Date Of Birth</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                      <input type="text" value="{{to_send[2]}}" name="DOB">
+                                    </div>
+                                  </div>
+                                  <hr>
+                                  <div class="row">
+                                    <div class="col-sm-3">
+                                      <h6 class="mb-0">Team</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                      <input type="text" value="{{to_send[6]}}" name="team">
+                                    </div>
+                                  </div>
+                                  <hr>
+                                  <div class="row">
+                                    <div class="col-sm-3">
+                                      <h6 class="mb-0">Country</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                      <input type="text" value="{{to_send[8]}}" name="country">
+                                    </div>
+                                  </div>
+                                  <hr>
+                                  <div class="row">
+                                    <div class="col-sm-3">
+                                      <h6 class="mb-0">Experience</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                      <input type="text" value="{{to_send[7]}}" name="experience">
+                                    </div>
+                                  </div>
+                                  <hr>
+                                  <div class="row">
+                                    <div class="col-sm-3">
+                                      <h6 class="mb-0">ID</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                      {{to_send[0]}}
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="btn btn-primary display-6" type="submit">Submit</button>
+                              </div>
+                            </form>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+                <script src="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+                <script type="text/javascript">
+                    
+                </script>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<center><div ><a class="btn btn-primary display-4" href="{{ url_for('index')}}">Logout</a></div></center>
+</body>
+</html>
